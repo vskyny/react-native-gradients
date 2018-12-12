@@ -1,13 +1,15 @@
 import PropTypes from 'prop-types'
 import React, { Component } from 'react'
+import { View } from 'react-native'
 import Svg, { Defs, RadialGradient as SVGRadialGradient, Rect, Stop } from 'react-native-svg'
 
 class RadialGradient extends Component {
 
   render () {
-    const {colorList, x, y, rx, ry} = this.props
+    const {colorList, x, y, rx, ry, cStyle, children} = this.props
 
     return (
+      <View style={cStyle}>
       <Svg height="100%" width="100%">
         <Defs>
           <SVGRadialGradient
@@ -30,6 +32,8 @@ class RadialGradient extends Component {
           fill="url(#grad)"
         />
       </Svg>
+      {children}
+      </View>
     )
   }
 }
