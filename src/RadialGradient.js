@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types'
 import React, { Component } from 'react'
 import { View } from 'react-native'
-import Svg, { Defs, RadialGradient as SVGRadialGradient, Rect, Stop } from 'react-native-svg'
+import Svg, { Defs, RadialGradient as SVGRadialGradient, Circle, Stop } from 'react-native-svg'
 
 class RadialGradient extends Component {
 
@@ -24,13 +24,21 @@ class RadialGradient extends Component {
                                           stopOpacity={value.opacity}/>)}
           </SVGRadialGradient>
         </Defs>
-        <Rect
-          x="0"
-          y="0"
-          width="100%"
-          height="100%"
+        {/* <Circle
+          // x="0"
+          // y="0"
+          cx="50%"
+          cy="50%"
+          // width="100%"
+          // height="100%"
           fill="url(#grad)"
-        />
+        /> */}
+        <Circle
+            cx="50%"
+            cy="50%"
+            r="50%"
+            fill="url(#grad)"
+          />
       </Svg>
       {children}
       </View>
