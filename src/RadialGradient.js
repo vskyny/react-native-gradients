@@ -24,15 +24,6 @@ class RadialGradient extends Component {
                                           stopOpacity={value.opacity}/>)}
           </SVGRadialGradient>
         </Defs>
-        {/* <Circle
-          // x="0"
-          // y="0"
-          cx="50%"
-          cy="50%"
-          // width="100%"
-          // height="100%"
-          fill="url(#grad)"
-        /> */}
         <Circle
             cx="50%"
             cy="50%"
